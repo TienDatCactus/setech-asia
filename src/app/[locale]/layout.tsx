@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/main/Footer";
 import Header from "@/components/layout/main/Header";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function LocaleLayout({
   children,

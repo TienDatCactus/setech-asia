@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { MailSearch, MapPinHouse, Menu, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -72,10 +73,12 @@ const Header: React.FC = () => {
           <Image
             src={"/images/Picture1.png"}
             alt="setech"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
           />
-          <span className="font-bold text-[1.875rem]">SETECH ASIA</span>
+          <span className="font-bold text-[1.875rem]">
+            SETECH SERVICE CO., LTD
+          </span>
         </div>
         <div className="flex items-center gap-4">
           <ul className="flex items-center gap-8 text-[1.25rem]">
@@ -107,64 +110,66 @@ const Header: React.FC = () => {
                 onClick={() => setOpenSidebar(false)} // optional: click to close
               />
 
-              <motion.div
-                initial={{ x: 400 }}
-                animate={{ x: 0 }}
-                exit={{ x: 400 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="fixed top-0 right-0 w-[25rem] h-full bg-white shadow-lg p-4 z-50 overflow-auto *:text-[#0d0e1d]"
-              >
-                <div className="flex items-center justify-end">
-                  <Button
-                    variant="outline"
-                    className="border-none hover:bg-[#071afd] hover:text-white cursor-pointer"
-                    size={"icon"}
-                    onClick={() => setOpenSidebar(false)}
-                  >
-                    <X />
-                  </Button>
-                </div>
-                <article>
-                  <h1 className="font-bold text-[1.875rem]">
-                    SETECH SERVICE CO., LTD
-                  </h1>
-                  <p className="text-[1.25rem] leading-[1.75rem] my-4">
-                    Our goal is to help customers minimize operating and
-                    maintenance costs, avoid the risk of operational incidents,
-                    protect equipment, save energy, and increase production
-                    efficiency through the application of leading technologies
-                    and methods.
-                  </p>
-                  <Image
-                    src={"/images/pexels-pixabay-221047.jpg"}
-                    alt="setech"
-                    width={1000}
-                    height={10}
-                    className="w-full h-auto object-contain my-4"
-                  />
-                </article>
-                <dl>
-                  <div className="my-8">
-                    <MapPinHouse size={30} className="text-[#071afd]" />
-                    <dt className="font-bold text-[1.875rem]">Address</dt>
-                    <dd className="text-[1.25rem] leading-[1.75rem] ">
-                      Số nhà 2, Ngách 164/81 Đường Ỷ La, Tổ dân phố Đoàn Kết,
-                      Phường Dương Nội, Quận Hà Đông, Thành phố Hà Nội
-                    </dd>
+              <ScrollArea>
+                <motion.div
+                  initial={{ x: 400 }}
+                  animate={{ x: 0 }}
+                  exit={{ x: 400 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="fixed top-0 right-0 w-[25rem] h-full bg-white shadow-lg p-4 z-50 overflow-auto *:text-[#0d0e1d]"
+                >
+                  <div className="flex items-center justify-end">
+                    <Button
+                      variant="outline"
+                      className="border-none hover:bg-[#071afd] hover:text-white cursor-pointer"
+                      size={"icon"}
+                      onClick={() => setOpenSidebar(false)}
+                    >
+                      <X />
+                    </Button>
                   </div>
-                  <div className="my-8">
-                    <MailSearch size={30} className="text-[#071afd]" />
-                    <dt className="font-bold text-[1.875rem]">Contact</dt>
-                    <dd className="text-[1.25rem] leading-[1.75rem]">
-                      ceeisco@gmail.com
-                    </dd>
-                    <dd className="text-[1.25rem] leading-[1.75rem]">
-                      0845619555
-                    </dd>
-                  </div>
-                </dl>
-                <ul></ul>
-              </motion.div>
+                  <article>
+                    <h1 className="font-bold text-[1.875rem]">
+                      SETECH SERVICE CO., LTD
+                    </h1>
+                    <p className="text-[1.25rem] leading-[1.75rem] my-4">
+                      Our goal is to help customers minimize operating and
+                      maintenance costs, avoid the risk of operational
+                      incidents, protect equipment, save energy, and increase
+                      production efficiency through the application of leading
+                      technologies and methods.
+                    </p>
+                    <Image
+                      src={"/images/Picture2.jpg"}
+                      alt="setech"
+                      width={1000}
+                      height={10}
+                      className="w-full h-auto object-contain my-4"
+                    />
+                  </article>
+                  <dl>
+                    <div className="my-8">
+                      <MapPinHouse size={30} className="text-[#071afd]" />
+                      <dt className="font-bold text-[1.875rem]">Address</dt>
+                      <dd className="text-[1.25rem] leading-[1.75rem] ">
+                        Số nhà 2, Ngách 164/81 Đường Ỷ La, Tổ dân phố Đoàn Kết,
+                        Phường Dương Nội, Quận Hà Đông, Thành phố Hà Nội
+                      </dd>
+                    </div>
+                    <div className="my-8">
+                      <MailSearch size={30} className="text-[#071afd]" />
+                      <dt className="font-bold text-[1.875rem]">Contact</dt>
+                      <dd className="text-[1.25rem] leading-[1.75rem]">
+                        ceeisco@gmail.com
+                      </dd>
+                      <dd className="text-[1.25rem] leading-[1.75rem]">
+                        0845619555
+                      </dd>
+                    </div>
+                  </dl>
+                  <ul></ul>
+                </motion.div>
+              </ScrollArea>
             </>
           )}
         </div>
