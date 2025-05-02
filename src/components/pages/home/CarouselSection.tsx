@@ -40,14 +40,15 @@ const CarouselSection: React.FC = () => {
           Reliability, Efficiency, and Asset Integrity
         </h1>
       </div>
-      <div className="h-full w-[90%] mx-auto flex items-center justify-center">
+      <div className="h-full w-[90%] mx-auto flex items-center justify-center py-4">
         <Swiper
           slidesPerView={4}
+          spaceBetween={30}
           pagination={{
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper gap-2 min-h-[400px] cursor-pointer"
+          className="mySwiper gap-2 min-h-[26.25rem] cursor-pointer "
         >
           {!!cards?.length &&
             [...cards, ...cards].map((card, index) => (
