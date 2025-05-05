@@ -24,7 +24,7 @@ const ServiceSection: React.FC = () => {
   return (
     <section className="relative h-full w-full min-h-[37.5rem] bg-[#0d0e1d]">
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(#ffffff33_1px,#0d0e1d_1px)] bg-[size:20px_20px] "></div>
-      <div className="absolute bottom-0 left-0 right-0 top-0 max-w-[125rem] mx-auto text-white py-20">
+      <div className="absolute bottom-0 left-0 right-0 top-0 max-w-[1600px] mx-auto text-white py-20">
         <h1 className="text-4xl font-bold text-center">
           At SETECH SERVICE, we partner with you through a structured approach
           to optimize your operational reliability, enhance asset integrity, and

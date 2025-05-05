@@ -70,7 +70,7 @@ const Header: React.FC = () => {
       </AnimatePresence>
 
       <motion.div className="flex items-center justify-between h-[6.25rem] *:text-white w-full border-b border-[#b5b5b5] px-10">
-        <div className="flex items-center gap-2">
+        <Link href={"/home"} className="flex items-center gap-2">
           <Image
             src={"/images/Picture1.png"}
             alt="setech"
@@ -80,11 +80,13 @@ const Header: React.FC = () => {
           <span className="font-bold text-[1.875rem]">
             SETECH SERVICE CO., LTD
           </span>
-        </div>
+        </Link>
         <div className="flex items-center gap-4">
           <ul className="flex items-center gap-8 text-[1.25rem]">
             <li>
-              <nav><Link href={"/about"}>About Us</Link></nav>
+              <nav>
+                <Link href={"/case-study"}>Case Study</Link>
+              </nav>
             </li>
             <li>
               <nav>Services</nav>

@@ -28,7 +28,6 @@ const page: React.FC = () => {
           </p>
           <Button className="bg-white text-[#0f172a] hover:bg-white hover:scale-110 border-none rounded-none px-14 py-8 text-lg font-semibold group cursor-pointer flex items-center gap-2">
             Start a Project <Power />
-            
           </Button>
         </div>
       </section>
