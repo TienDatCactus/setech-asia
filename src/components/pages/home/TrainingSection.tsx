@@ -31,7 +31,7 @@ const TrainingSection: React.FC = () => {
                 <i>ISO 18436-7 standards</i>
               </b>
               . This is an exclusive program developed and led by{" "}
-              <HoverCard >
+              <HoverCard>
                 <HoverCardTrigger>
                   <u className="hover:text-[#071afd] cursor-pointer">
                     Mr. Mikael Cronholm
@@ -40,20 +40,30 @@ const TrainingSection: React.FC = () => {
                 <HoverCardContent className="w-[28.75rem]">
                   <div className="grid grid-cols-12 gap-4 items-center">
                     <div className="col-span-3">
-                      <Image 
-                      src="/images/cronholm.jpg"
-                      alt="Mr. Mikael Cronholm"
-                      className="w-full p-2 object-cover object-center rounded-full border border-[#ccc]"
-                      width={2000}
-                      height={200}
+                      <Image
+                        src="/images/cronholm.jpg"
+                        alt="Mr. Mikael Cronholm"
+                        className="w-full p-2 object-cover object-center rounded-full border border-[#ccc]"
+                        width={2000}
+                        height={200}
                       />
                     </div>
                     <article className="col-span-9">
                       <h1 className="text-2xl font-semibold hover:underline">
-                       <a href="https://www.linkedin.com/in/mikael-cronholm-37876415b/" target="_blank"> Mr. Mikael Cronholm</a>
+                        <a
+                          href="https://www.linkedin.com/in/mikael-cronholm-37876415b/"
+                          target="_blank"
+                        >
+                          {" "}
+                          Mr. Mikael Cronholm
+                        </a>
                       </h1>
                       <p className="text-md leading-6">
-                      An experienced Swedish Infrared Thermography expert with 33 years in the field, specializing in Furnace Thermal Diagnosis and serving as the developer and instructor for Setech Service's exclusive IRT training program.
+                        An experienced Swedish Infrared Thermography expert with
+                        33 years in the field, specializing in Furnace Thermal
+                        Diagnosis and serving as the developer and instructor
+                        for Setech Service&apos;s exclusive IRT training
+                        program.
                       </p>
                       <cite className="text-sm text-gray-500">
                         Expert in Infrared Thermography
@@ -93,7 +103,7 @@ const TrainingSection: React.FC = () => {
                   . For specialized needs, we offer an{" "}
                   <b>Advanced Course for Fired Heaters</b>. Learning is enhanced
                   by <b>extensive real-life case studies</b> drawn from the
-                  instructor's vast experience, enabling you to perform
+                  instructor&apos;s vast experience, enabling you to perform
                   insightful analysis.
                 </AccordionContent>
               </AccordionItem>
@@ -109,7 +119,7 @@ const TrainingSection: React.FC = () => {
                   <b>design, implement, and effectively manage</b> your own IRT
                   program. The training equips you with skills to monitor,
                   analyze, and create actionable reports. With the expert
-                  tutor's guidance and the option for onsite mentoring, you
+                  tutor&apos;s guidance and the option for onsite mentoring, you
                   receive dedicated support to{" "}
                   <b>maximize the benefits of your IRT equipment</b> and{" "}
                   <b>avoid costly mistakes</b>.

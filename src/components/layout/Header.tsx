@@ -4,6 +4,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { MailSearch, MapPinHouse, Menu, Phone, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 const Header: React.FC = () => {
   const [yAxis, setYAxis] = useState(0);
@@ -69,7 +70,7 @@ const Header: React.FC = () => {
       </AnimatePresence>
 
       <motion.div className="flex items-center justify-between h-[6.25rem] *:text-white w-full border-b border-[#b5b5b5] px-10">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <Image
             src={"/images/Picture1.png"}
             alt="setech"
@@ -83,7 +84,7 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-4">
           <ul className="flex items-center gap-8 text-[1.25rem]">
             <li>
-              <nav>About Us</nav>
+              <nav><Link href={"/about"}>About Us</Link></nav>
             </li>
             <li>
               <nav>Services</nav>
