@@ -1,16 +1,24 @@
-import Footer from "@/components/layout/main/Footer";
-import Header from "@/components/layout/main/Header";
+"use client";
+import {
+  Footer,
+  FooterExternal,
+  Header,
+  HeaderExternal,
+} from "@/components/layout";
+import { useSelectedLayoutSegment } from "next/navigation";
 
 export default function LocaleLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const segment = useSelectedLayoutSegment();
+  console.log(segment);
   return (
     <>
-      <Header />
-      <div className={`antialiased min-h-screen`}>{children}</div>
-      <Footer />
+      {segment !== "home" ? <HeaderExternal /> : <Header />}
+      <main className={`antialiased min-h-screen`}>{children}</main>
+      {segment !== "home" ? <FooterExternal /> : <Footer />}
     </>
   );
 }

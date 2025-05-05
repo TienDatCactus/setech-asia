@@ -4,15 +4,15 @@ import Image from "next/image";
 import React from "react";
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full h-[800px] flex flex-col items-center justify-center text-white text-center bg-[#1a29d2]">
+    <section className="relative w-full min-h-[800px] flex flex-col items-center justify-center text-white text-center bg-[#1a29d2]">
       <Image
         src="/images/pexels-pixabay-221047.jpg"
         alt=""
         width={1000}
         height={100}
-        className="w-full min-h-60 max-h-[800px] object-cover  mask-b-from-60% mask-b-to-90% brightness-60"
+        className="w-full min-h-60 max-h-[800px] object-cover  mask-b-from-60% mask-b-to-90% brightness-60 bg-scroll"
       />
-      <article className="absolute flex flex-col items-start top-70 w-full h-full gap-6 px-10 text-white bg-opacity-50">
+      <article className="absolute flex flex-col items-start top-70 w-full h-full gap-6 px-22 max-w-[2000px] text-white bg-opacity-50">
         <h1 className="text-[3.75rem] font-bold leading-tight w-2/3 text-start">
           Optimizing Industrial Performance, Protecting Assets, Building a
           Better Future.
