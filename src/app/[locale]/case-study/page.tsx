@@ -51,8 +51,8 @@ const page: React.FC = () => {
                   <Dot size={30} />
                   <p>{item.date}</p>
                 </div>
-                <h1 className="text-5xl my-4 font-bold">{item.title}</h1>
-                <p className="text-md line-clamp-3 mb-4">{item?.summary}</p>
+                <h1 className="text-5xl my-2 font-bold">{item.title}</h1>
+                <p className="text-md line-clamp-3 my-4">{item?.summary}</p>
                 <Link
                   href={`/case-study/${item?.title
                     ?.toLowerCase()
