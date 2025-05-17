@@ -31,7 +31,18 @@ export default function LocaleLayout({
           <div className="bg-[#071afd] opacity-50  absolute inset-0"></div>
           <div className="absolute w-full h-full  text-white py-2  flex items-center justify-center  flex-col">
             <div className="max-w-[125rem] mx-auto px-10 flex items-center justify-center gap-6 flex-col ">
-              <h1 className="text-8xl font-bold">Case Study</h1>
+              <h1 className="text-8xl font-bold">
+                {segment
+                  ? segment
+                      .split("-")
+                      .map((item, index) =>
+                        index === 0
+                          ? item.replace(/^\w/, (c) => c.toUpperCase())
+                          : item
+                      )
+                      .join(" ")
+                  : "Case Study"}
+              </h1>
               <Breadcrumb>
                 <BreadcrumbList>
                   <BreadcrumbItem>
@@ -39,7 +50,9 @@ export default function LocaleLayout({
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
                   <BreadcrumbItem>
-                    <BreadcrumbPage>Case Study</BreadcrumbPage>
+                    <BreadcrumbLink href="/case-study">
+                      Case Study
+                    </BreadcrumbLink>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>

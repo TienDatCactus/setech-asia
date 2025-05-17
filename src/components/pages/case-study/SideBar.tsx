@@ -4,7 +4,7 @@ import { Search } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 const SideBar: React.FC = () => {
   const [viewMore, setViewMore] = useState(false);
   const tags = [
@@ -26,23 +26,26 @@ const SideBar: React.FC = () => {
     "Asset Integrity",
     "Operational Reliability",
   ];
-  const originalCategories = [
-    "Fired Heaters / Furnaces / Boilers",
-    "Rotating Equipment",
-    "Static Equipment & Piping",
-    "Electrical Systems",
-    "MCC & Low Voltage Components",
-    "Predictive Maintenance Applications",
-    "Diagnosis & Troubleshooting",
-    "Energy Efficiency / Fuel Saving",
-    "Asset Integrity & Operational Reliability",
-    "Safety Applications",
-    "Refining & Petrochemicals Industry",
-    "Power Generation Industry",
-    "Oil & Gas Industry",
-    "Fertilizer / Agrichem Industry",
-    "Other Industrial Applications",
-  ];
+  const originalCategories = useMemo(
+    () => [
+      "Fired Heaters / Furnaces / Boilers",
+      "Rotating Equipment",
+      "Static Equipment & Piping",
+      "Electrical Systems",
+      "MCC & Low Voltage Components",
+      "Predictive Maintenance Applications",
+      "Diagnosis & Troubleshooting",
+      "Energy Efficiency / Fuel Saving",
+      "Asset Integrity & Operational Reliability",
+      "Safety Applications",
+      "Refining & Petrochemicals Industry",
+      "Power Generation Industry",
+      "Oil & Gas Industry",
+      "Fertilizer / Agrichem Industry",
+      "Other Industrial Applications",
+    ],
+    []
+  );
   const [categories, setCategories] = useState(originalCategories);
   useEffect(() => {
     if (viewMore) {
@@ -50,7 +53,7 @@ const SideBar: React.FC = () => {
     } else {
       setCategories(originalCategories.slice(0, 6));
     }
-  }, [viewMore]);
+  }, [viewMore, originalCategories]);
   console.log(viewMore);
   const handleViewMore = () => {
     setViewMore(!viewMore);
@@ -76,6 +79,7 @@ const SideBar: React.FC = () => {
           <motion.ul
             initial={{ height: 300 }}
             animate={{ height: "auto" }}
+            exit={{ height: 300 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             key={viewMore ? "expanded" : "collapsed"}
             id="categories"
@@ -117,8 +121,10 @@ const SideBar: React.FC = () => {
               />
             </div>
             <div className="col-span-9 flex flex-col items-start justify-center">
-              <dt className="text-xl font-bold">Recent Post Title</dt>
-              <dl>02/26/2023</dl>
+              <dt className="text-xl font-bold line-clamp-2">
+                Recent Post Title
+              </dt>
+              <dl className="text-sm">02/26/2023</dl>
             </div>
           </div>
         </dl>
