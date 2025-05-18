@@ -17,14 +17,14 @@ import { Plus, Trophy } from "lucide-react";
 
 const TrainingSection: React.FC = () => {
   return (
-    <section className="relative h-full w-full min-h-[50rem] bg-[#f5f5f5]">
-      <div className="grid grid-cols-12 space-x-4 max-w-[125rem] mx-auto text-[#0d0e1d] py-40 px-10">
-        <article className="col-span-6 flex flex-col items-start justify-center gap-4 px-6">
+    <section className="relative h-full w-full lg:min-h-[50rem] bg-[#f5f5f5]">
+      <div className="grid grid-cols-12 space-x-4 max-w-[125rem] mx-auto text-[#0d0e1d] py-20 lg:py-40 lg:px-10">
+        <article className="col-span-12 lg:col-span-6 flex flex-col items-start justify-center gap-4 px-6">
           <div className="flex flex-col items-start justify-center gap-4">
-            <h1 className="text-6xl font-bold">
+            <h1 className=" text-5xl lg:text-6xl font-bold">
               Proven Expertise in Thermal Science & Fundamentals
             </h1>
-            <p className="text-xl">
+            <p className="text-lg lg:text-xl">
               Our training provides foundational scientific knowledge in thermal
               science and IRT measurement, adhering strictly to{" "}
               <b>
@@ -39,7 +39,7 @@ const TrainingSection: React.FC = () => {
                 </HoverCardTrigger>
                 <HoverCardContent className="w-[28.75rem]">
                   <div className="grid grid-cols-12 gap-4 items-center">
-                    <div className="col-span-3">
+                    <div className=" col-span-12 lg:col-span-3">
                       <Image
                         src="/images/cronholm.jpg"
                         alt="Mr. Mikael Cronholm"
@@ -48,7 +48,7 @@ const TrainingSection: React.FC = () => {
                         height={200}
                       />
                     </div>
-                    <article className="col-span-9">
+                    <article className=" col-span-12 lg:col-span-9">
                       <h1 className="text-2xl font-semibold hover:underline">
                         <a
                           href="https://www.linkedin.com/in/mikael-cronholm-37876415b/"
@@ -80,19 +80,23 @@ const TrainingSection: React.FC = () => {
             <Accordion
               type="single"
               collapsible
-              className="min-h-[25rem] w-full"
-              defaultChecked={true}
+              className="w-full"
               defaultValue="item-1"
             >
-              <AccordionItem value="item-1" defaultChecked={true}>
-                <AccordionTrigger className="text-xl flex items-center">
-                  <Plus className="mr-2" />
-                  <h1 className="text-2xl font-semibold">
-                    Insightful Diagnosis & Real-world Application
-                  </h1>
+              <AccordionItem
+                value="item-1"
+                className="border-b border-[#0d0e1d]/20"
+              >
+                <AccordionTrigger className="py-4 transition-all hover:text-[#071afd]">
+                  <div className="flex items-center gap-2">
+                    <Plus className="h-5 w-5 shrink-0 transition-transform group-data-[state=open]:rotate-45" />
+                    <h1 className="text-2xl font-semibold text-left">
+                      Insightful Diagnosis & Real-world Application
+                    </h1>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-xl">
-                  The course focuses on <b>practical applications</b> of IRT for
+                <AccordionContent className="text-xl pb-4 pt-2 overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                  The course focuses on <b>practical applications</b> of IRT for{" "}
                   <b>condition monitoring</b> and <b>fault diagnosis</b> in
                   industrial settings. You will learn to diagnose issues in key
                   equipment like{" "}
@@ -107,14 +111,19 @@ const TrainingSection: React.FC = () => {
                   insightful analysis.
                 </AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-xl flex items-center">
-                  <Plus className="mr-2" />
-                  <h1 className="text-2xl font-semibold">
-                    Empowering Program Management & Dedicated Support
-                  </h1>
+              <AccordionItem
+                value="item-2"
+                className="border-b border-[#0d0e1d]/20"
+              >
+                <AccordionTrigger className="py-4 transition-all hover:text-[#071afd]">
+                  <div className="flex items-center gap-2">
+                    <Plus className="h-5 w-5 shrink-0 transition-transform group-data-[state=open]:rotate-45" />
+                    <h1 className="text-2xl font-semibold text-left">
+                      Empowering Program Management & Dedicated Support
+                    </h1>
+                  </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-xl">
+                <AccordionContent className="text-xl pb-4 pt-2 overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                   Gain the expertise to{" "}
                   <b>design, implement, and effectively manage</b> your own IRT
                   program. The training equips you with skills to monitor,
@@ -128,7 +137,7 @@ const TrainingSection: React.FC = () => {
             </Accordion>
           </div>
         </article>
-        <div className="col-span-6 relative group">
+        <div className="col-span-12 lg:col-span-6 relative group">
           <Image
             src="/images/pexels-rezwan-1216589.jpg"
             alt="mentoring"

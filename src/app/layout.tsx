@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title:
       "CÔNG TY TNHH DỊCH VỤ SETECH (SETECHS) | Giải pháp & Dịch vụ Công nghiệp hàng đầu tại Việt Nam",
     description:
-      "Setechsasia cung cấp giải pháp, dịch vụ và đào tạo chuyên sâu về bảo trì công nghiệp, chẩn đoán nhiệt, làm sạch online & offline, bảo vệ thiết bị, tiết kiệm năng lượng và nhiên liệu. Chúng tôi phục vụ các ngành Lọc hóa dầu, Điện, Khí, Đạm, Vật liệu, v.v. với mục tiêu giúp khách hàng giảm chi phí, tránh rủi ro, bảo vệ tài sản và nâng cao hiệu quả sản xuất.",
+      "SETECH cung cấp giải pháp, dịch vụ và đào tạo chuyên sâu về bảo trì công nghiệp, chẩn đoán nhiệt, làm sạch online & offline, bảo vệ thiết bị, tiết kiệm năng lượng và nhiên liệu. Chúng tôi phục vụ các ngành Lọc hóa dầu, Điện, Khí, Đạm, Vật liệu, v.v. với mục tiêu giúp khách hàng giảm chi phí, tránh rủi ro, bảo vệ tài sản và nâng cao hiệu quả sản xuất.",
     images: ["[URL hình ảnh đại diện]"], // Thay bằng URL hình ảnh thực tế nếu có
   },
 };

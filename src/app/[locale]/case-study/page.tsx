@@ -10,7 +10,7 @@ const page: React.FC = () => {
       date: "26 June 2023",
       technology: "Infrared Thermography",
       summary:
-        "Drawing from extensive real-life experience, Setechsasia's case studies demonstrate how Infrared Thermography is critically applied for advanced diagnosis and troubleshooting of fired heaters, furnaces, and boilers. Examples cover identifying conditions like coke build-up, scale, burner problems, imbalanced heating, dry zones, and defects in components such as hangers and tube guides. These cases illustrate optimizing operations, increasing safety, and preventing costly premature shutdowns.",
+        "Drawing from extensive real-life experience, Setechsasia&apos;s case studies demonstrate how Infrared Thermography is critically applied for advanced diagnosis and troubleshooting of fired heaters, furnaces, and boilers. Examples cover identifying conditions like coke build-up, scale, burner problems, imbalanced heating, dry zones, and defects in components such as hangers and tube guides. These cases illustrate optimizing operations, increasing safety, and preventing costly premature shutdowns.",
     },
     {
       title: "IRT Applications in Industrial Equipment Maintenance",
@@ -46,13 +46,17 @@ const page: React.FC = () => {
                 />
               </div>
               <div className="p-4">
-                <div className="flex items-center gap-2 *:text-gray-600 *:text-sm">
+                <div className="flex items-center gap-2 *:text-gray-600 *:text-xs lg:*:text-sm">
                   <p>{item.technology}</p>
                   <Dot size={30} />
                   <p>{item.date}</p>
                 </div>
-                <h1 className="text-5xl my-2 font-bold">{item.title}</h1>
-                <p className="text-md line-clamp-3 my-4">{item?.summary}</p>
+                <h1 className="text-xl md:text-5xl my-2 font-bold">
+                  {item.title}
+                </h1>
+                <p className="text-sm lg:text-lg line-clamp-3 my-4">
+                  {item?.summary}
+                </p>
                 <Link
                   href={`/case-study/${item?.title
                     ?.toLowerCase()

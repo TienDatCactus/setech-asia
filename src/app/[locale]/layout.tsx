@@ -17,7 +17,7 @@ export default function LocaleLayout({
   return (
     <>
       {segment !== "home" ? <HeaderExternal /> : <Header />}
-      <main className={`antialiased min-h-screen`}>{children}</main>
+      <main className={`antialiased`}>{children}</main>
       {segment !== "home" ? <FooterExternal /> : <Footer />}
     </>
   );

@@ -29,14 +29,14 @@ const Header: React.FC = () => {
           <motion.div
             key="header"
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 60, opacity: 1 }}
+            animate={{ height: 80, opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="overflow-hidden bg-[#071afd] px-10 *:text-white flex items-center justify-between"
+            className="overflow-hidden bg-[#071afd] px-10 *:text-white flex flex-col xl:flex-row items-center justify-around "
           >
             <div className="flex items-center gap-2">
               <MapPinHouse size={20} />
-              <span>
+              <span className="truncate w-[300px] md:w-full  text-ellipsis wrap-normal">
                 Số nhà 2, Ngách 164/81 Đường Ỷ La, Tổ dân phố Đoàn Kết, Phường
                 Dương Nội, Quận Hà Đông, Thành phố Hà Nội
               </span>
@@ -69,30 +69,31 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <motion.div className="flex items-center justify-between h-[6.25rem] *:text-white w-full border-b border-[#b5b5b5] px-10">
+      <motion.div className="flex items-center justify-between h-[6.25rem] *:text-white w-full border-b border-[#b5b5b5] px-4 md:px-10">
         <Link href={"/home"} className="flex items-center gap-2">
           <Image
             src={"/images/Picture1.png"}
             alt="setech"
             width={60}
             height={60}
+            className=" w-12 h-12 md:w-16 md:h-16 object-contain"
           />
-          <span className="font-bold text-[1.875rem]">
+          <span className="md:block hidden font-bold text-2xl lg:text-3xl">
             SETECH SERVICE CO., LTD
           </span>
         </Link>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 ">
           <ul className="flex items-center gap-8 text-[1.25rem]">
             <li>
               <nav>
                 <Link href={"/case-study"}>Case Study</Link>
               </nav>
             </li>
+
             <li>
-              <nav>Services</nav>
-            </li>
-            <li>
-              <nav>Contact Us</nav>
+              <nav>
+                <Link href={"/contact-us"}>Contact Us</Link>
+              </nav>
             </li>
           </ul>
           <a
