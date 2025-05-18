@@ -19,9 +19,9 @@ const InfoSection: React.FC = () => {
     },
   ];
   return (
-    <section className="w-full min-h-[37.5rem] bg-white flex items-center justify-center">
-      <div className="grid grid-cols-12 h-full  max-w-[1200px] mx-auto py-20">
-        <div className="col-span-6 relative  group">
+    <section className="w-full min-h-[37.5rem] bg-white flex  items-center justify-center ">
+      <div className="grid grid-cols-12 h-full   max-w-[1200px] mx-auto py-20">
+        <div className="col-span-12 lg:col-span-6  relative  group">
           <Image
             src="/images/info1.jpg"
             loading="lazy"
@@ -37,7 +37,7 @@ const InfoSection: React.FC = () => {
             <h1>100% Customer Satisfaction</h1>
           </div>
         </div>
-        <article className="col-span-6 flex flex-col items-start justify-center gap-4 p-10">
+        <article className="col-span-12 lg:col-span-6 flex flex-col items-start justify-center gap-4 p-10">
           <h1 className="text-4xl font-bold leading-tight hover:text-[#071afd]">
             Easily Enhance Your Operations With Our Core Expertise
           </h1>
